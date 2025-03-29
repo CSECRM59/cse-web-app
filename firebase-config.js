@@ -4,6 +4,12 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/10.8.1/firebase
 import { getStorage } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-storage.js";
 
 // Configuration Firebase
+// Importation des modules Firebase
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+import { getStorage } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-storage.js";
+
+// Configuration Firebase
 const firebaseConfig = {
 
  apiKey: "AIzaSyBcQq4aJIYA3IiqkNs9L6CUHJ7BsJdkVqI",
@@ -20,6 +26,10 @@ const firebaseConfig = {
 
 };
 
+// Initialisation de Firebase
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
+export const storage = getStorage(app);
 // Initialisation de Firebase
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
