@@ -1,5 +1,6 @@
 import { db, collection, getDocs } from "./firebase-config.js";
 
+
 async function loadNews() {
     const newsContainer = document.getElementById("news-container");
     newsContainer.innerHTML = "<p>Chargement des actualités...</p>";
