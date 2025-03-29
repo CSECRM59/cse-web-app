@@ -3,91 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actualités du CSE</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        header {
-            background-color: #0073e6;
-            color: white;
-            padding: 15px 0;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            margin: 20px;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #0073e6;
-            color: white;
-        }
-    </style>
+    <title>Application CSE</title>
+    <script type="module" src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Bienvenue sur l'application du CSE</h1>
-        <nav>
-            <ul>
-                <li><a href="#news">Actualités</a></li>
-                <input type="text" id="titre" placeholder="Titre">
-                    <textarea id="contenu" placeholder="Contenu"></textarea>
-                    <input type="file" id="imageUpload">
-                    <button id="uploadBtn">Publier</button>
-                <li><a href="#forms">Formulaires</a></li>
-                <li><a href="dashboard.html">Espace CSE</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="news">
-        <h2>Dernières actualités</h2>
-        <div id="news-container">
-            <p>Chargement des actualités...</p>
-        </div>
-    </section>
-    
-    <section id="forms">
-        <h2>Formulaires</h2>
-        <ul>
-            <li><a href="form_contact.html">Contact</a></li>
-            <li><a href="form_cartes.html">Demande de cartes cadeaux</a></li>
-            <li><a href="form_signalement.html">Signaler un problème</a></li>
-            <li><a href="form_rdv.html">Prendre rendez-vous</a></li>
-        </ul>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 CSE - Tous droits réservés</p>
-    </footer>
-    
-   <script type="module" src="script.js"></script>
+    <h1>Bienvenue sur l'application du CSE</h1>
 
-   <!-- <script type="module">
-    import { loadNews } from "./script.js";
-    loadNews(); -->
-</script>
+    <h2>Ajouter une actualité</h2>
+    <input type="text" id="titre" placeholder="Titre"><br>
+    <textarea id="contenu" placeholder="Contenu"></textarea><br>
+    <input type="file" id="imageUpload"><br>
+    <button id="uploadBtn">Publier</button>
+
+    <h2>Dernières actualités</h2>
+    <div id="news-container"></div>
+
 </body>
 </html>
