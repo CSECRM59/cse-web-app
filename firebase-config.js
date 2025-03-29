@@ -11,19 +11,12 @@ import { getStorage } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-s
 
 // Configuration Firebase
 const firebaseConfig = {
-
- apiKey: "AIzaSyBcQq4aJIYA3IiqkNs9L6CUHJ7BsJdkVqI",
-
- authDomain: "cse-web-app-42a80.firebaseapp.com",
-
- projectId: "cse-web-app-42a80",
-
- storageBucket: "cse-web-app-42a80.firebasestorage.app",
-
- messagingSenderId: "1042278300922",
-
- appId: "1:1042278300922:web:2948e23daa93193b365d43"
-
+  apiKey: "AIzaSyApHjGTVTJNxuQEtsb6vkOAeuHwjBBwqnM",
+  authDomain: "cse-app-e6aa9.firebaseapp.com",
+  projectId: "cse-app-e6aa9",
+  storageBucket: "cse-app-e6aa9.firebasestorage.app",
+  messagingSenderId: "1075354004245",
+  appId: "1:1075354004245:web:a28a5e3128f7a9780fd71c"
 };
 
 // Initialisation de Firebase
