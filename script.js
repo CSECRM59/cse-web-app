@@ -1,4 +1,4 @@
-import { db, collection, getDocs } from "./firebase-config.js";
+/*import { db, collection, getDocs } from "./firebase-config.js";
 
 
 async function loadNews() {
@@ -17,7 +17,7 @@ async function loadNews() {
 }
 
 document.addEventListener("DOMContentLoaded", loadNews);
-
+*/
 import { storage, ref, uploadBytes, getDownloadURL } from "./firebase-config.js";
 import { db, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
 
