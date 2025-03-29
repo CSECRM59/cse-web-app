@@ -1,19 +1,9 @@
-// Import the functions you need from the SDKs you need
+// Importation des modules Firebase
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+import { getStorage } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-storage.js";
 
-//import { initializeApp } from "./firebase/app";
-
-// TODO: Add SDKs for Firebase products that you want to use
-
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// firebase-config.js
-//
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getFirestore, collection, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
-
-// Your web app's Firebase configuration
-
+// Configuration Firebase
 const firebaseConfig = {
 
  apiKey: "AIzaSyBcQq4aJIYA3IiqkNs9L6CUHJ7BsJdkVqI",
@@ -30,10 +20,7 @@ const firebaseConfig = {
 
 };
 
-
-
-// Initialize Firebase
-
+// Initialisation de Firebase
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
-export { collection, getDocs };
+export const storage = getStorage(app);
