@@ -1,4 +1,4 @@
-import { db, collection, getDocs } from "./firebase-config.js";
+import { db, collection, getDocs } from "firebase-config.js";
 
 async function loadNews() {
     const newsContainer = document.getElementById("news-container");
