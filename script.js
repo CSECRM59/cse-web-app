@@ -2,7 +2,7 @@ import { db, storage } from "./firebase-config.js";
 import { collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
 import { ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-storage.js";
 
-// Écouteur sur le bouton de publication
+// Fonction pour uploader une image et publier l'actualité
 document.getElementById("uploadBtn").addEventListener("click", async () => {
     const titre = document.getElementById("titre").value;
     const contenu = document.getElementById("contenu").value;
@@ -14,15 +14,12 @@ document.getElementById("uploadBtn").addEventListener("click", async () => {
         return;
     }
 
-    // Référence du fichier dans Firebase Storage
     const storageRef = ref(storage, "images/" + file.name);
 
     try {
-        // 1️⃣ Uploader l’image
         await uploadBytes(storageRef, file);
-        const imageURL = await getDownloadURL(storageRef);
+        const imageURL = await getDownloadURL(storageRef); // 🔥 Assure-toi que cette ligne fonctionne !
 
-        // 2️⃣ Ajouter l’actu dans Firestore
         await addDoc(collection(db, "actualites"), {
             titre: titre,
             contenu: contenu,
